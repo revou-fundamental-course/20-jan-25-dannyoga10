@@ -3,8 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Body Mass Index Calculator</title>
     <link rel="stylesheet" href="css\styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="js\script.js" defer></script>
   </head>
 
   <body>
@@ -27,22 +32,41 @@
 
         <!-- FORM -->
         <form>
+          <div class="jkl-group">
+            <p class="jenis-kelamin">Jenis Kelamin</p>
+            <input type="radio" name="jkl" id="pria" value="Pria" required />
+            <label for="pria">Pria</label>
+            <input type="radio" name="jkl" id="wanita" value="Wanita" />
+            <label for="wanita">Wanita</label>
+          </div>
           <div class="form-group">
             <label for="input-berat-badan">Berat Badan (kg)</label>
-            <input type="number" class="input-box" id="input-berat-badan" />
+            <input
+              type="number"
+              class="input-box"
+              id="input-berat-badan"
+              required
+            />
           </div>
 
           <div class="form-group">
             <label for="input-usia">Usia (Tahun)</label>
-            <input type="number" class="input-box" id="input-usia" />
+            <input type="number" class="input-box" id="input-usia" required />
           </div>
 
           <div class="form-group">
             <label for="input-tinggi-badan">Tinggi Badan (cm)</label>
-            <input type="number" class="input-box" id="input-tinggi-badan" />
+            <input
+              type="number"
+              class="input-box"
+              id="input-tinggi-badan"
+              required
+            />
           </div>
           <div>
-            <button class="button-hitung">Hitung BMI</button>
+            <button class="button-hitung" onclick="calculateBMI()">
+              Hitung BMI
+            </button>
             <button class="button-reset">Reset</button>
           </div>
         </form>
@@ -79,20 +103,22 @@
             <h2>Hasil</h2>
           </header>
           <div>
-            <span id="result-bmi">0</span>
+            <span id="result-bmi">0</span><br />
+            <span id="result-status"></span>
           </div>
         </section>
+        <div id="result-description"></div>
         <article>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta quasi
-            ut iste fuga unde impedit tempora eaque sint nulla accusamus
-            exercitationem modi ad beatae quia nihil illo cumque, doloribus
-            voluptatum?
+            BMI tidak sepenuhnya mewakili diagnosis menyeluruh dari kesehatan
+            tubuh dan resiko penyakit seseorang. Anda perlu konsultasi lebih
+            lanjut mengenai resiko dan kekhawatiran Anda terkait dengan berat
+            badan Anda.
           </p>
         </article>
       </section>
     </main>
 
-    <footer>Made by Danny@2025</footer>
+    <footer>Made by Danny @2025</footer>
   </body>
 </html>

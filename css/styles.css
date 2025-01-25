@@ -6,8 +6,8 @@ main {
   padding: 32px;
 }
 
-footer {
-  text-align: center;
+p {
+  text-align: justify;
 }
 
 .main-header {
@@ -93,14 +93,23 @@ input[type="number"] {
 }
 
 form {
+  border-radius: 10px;
   background-color: rgb(231, 230, 226);
   padding: 32px;
+}
+
+.jenis-kelamin {
+  margin-bottom: 5px;
+}
+
+.jkl-group {
+  padding-bottom: 10px;
 }
 
 .form-group {
   display: flex;
   flex-direction: column;
-  padding-bottom: 16px;
+  padding-bottom: 10px;
 }
 
 .input-box {
@@ -112,6 +121,7 @@ form {
 }
 
 .result-section {
+  border-radius: 10px;
   padding: 16px;
   background-color: rgb(231, 230, 226);
   text-align: center;
@@ -120,4 +130,12 @@ form {
 #result-bmi {
   font-size: xxx-large;
   font-family: math;
+}
+
+footer {
+  padding: 10px;
+  border-top: 1px solid #ececec;
+  font-family: "Roboto", Arial, sans-serif;
+  font-size: 16px;
+  text-align: center;
 }
