@@ -120,7 +120,8 @@ form {
   box-sizing: border-box;
 }
 
-.result-section {
+.result-section,
+.right-article {
   border-radius: 10px;
   padding: 16px;
   background-color: rgb(231, 230, 226);

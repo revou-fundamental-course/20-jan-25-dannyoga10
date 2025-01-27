@@ -1,4 +1,5 @@
-function calculateBMI() {
+function calculateBMI(event) {
+  event.preventDefault();
   const weight = document.getElementById("input-berat-badan").value;
   const height = document.getElementById("input-tinggi-badan").value;
 
@@ -16,7 +17,7 @@ function calculateBMI() {
     } else if (bmi >= 18.5 && bmi <= 24.9) {
       status = "Normal (ideal)";
       kategori =
-        "Anda termasuk dalam kategori Normal (ideal), pertahankan berat badan anda dengan berolahraga secara rutin dan mengonsumsi makanan yang sehat. ";
+        "Anda termasuk dalam kategori Normal (ideal), Pertahankan berat badan anda dengan berolahraga secara rutin dan mengonsumsi makanan yang sehat. ";
     } else if (bmi >= 25.0 && bmi <= 29.9) {
       status = "Kelebihan berat badan";
       kategori =
@@ -32,3 +33,5 @@ function calculateBMI() {
     alert("Please enter valid weight and height");
   }
 }
+
+document.querySelector("form").addEventListener("submit", calculateBMI);
