@@ -1,6 +1,16 @@
 /* file css */
 
+body {
+  background-image: url("/assets/background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  font-family: "Roboto", Arial, sans-serif;
+}
+
 main {
+  background-color: rgba(233, 233, 233, 0.9);
   display: flex;
   gap: 32px;
   padding: 32px;
@@ -12,6 +22,10 @@ p {
 
 .main-header {
   text-align: center;
+  padding: 10px;
+  border-bottom: 1px solid #ececec;
+  text-align: center;
+  font-family: "helvetica", Courier, monospace;
 }
 
 input[type="number"] {
@@ -92,13 +106,54 @@ input[type="number"] {
   white-space: nowrap;
 }
 
+.button-link {
+  background-color: #0095ff;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  box-shadow: rgba(255, 255, 255, 0.4) 0 1px 0 0 inset;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: -apple-system, system-ui, "Segoe UI", "Liberation Sans",
+    sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.15385;
+  margin: 0;
+  outline: none;
+  padding: 8px 0.8em;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: baseline;
+  white-space: nowrap;
+}
+
+.button-link:hover,
+.button-link:focus {
+  background-color: #07c;
+}
+
+.button-link:focus {
+  box-shadow: 0 0 0 4px rgba(0, 149, 255, 0.15);
+}
+
+.button-link:active {
+  background-color: #0064bd;
+  box-shadow: none;
+}
+
 form {
   border-radius: 10px;
-  background-color: rgb(231, 230, 226);
+  background-color: rgb(252, 251, 250, 0.3);
   padding: 32px;
 }
 
-.jenis-kelamin {
+form .jenis-kelamin {
   margin-bottom: 5px;
 }
 
@@ -124,7 +179,7 @@ form {
 .right-article {
   border-radius: 10px;
   padding: 16px;
-  background-color: rgb(231, 230, 226);
+  background-color: rgba(252, 251, 250, 0.8);
   text-align: center;
 }
 
@@ -133,10 +188,21 @@ form {
   font-family: math;
 }
 
+#result-description {
+  margin-top: 15px;
+  text-align: justify;
+}
+
 footer {
   padding: 10px;
   border-top: 1px solid #ececec;
   font-family: "Roboto", Arial, sans-serif;
-  font-size: 16px;
+  font-size: 13px;
   text-align: center;
+}
+
+img {
+  width: 100%;
+  border-radius: 10px;
+  margin-top: 20px;
 }
